@@ -104,7 +104,55 @@ class User1 {
     }
 }
 
-const u5 = new User1('Zbigniew');
+// const u5 = new User1('Zbigniew');
 
 
+// function magic(data) {
+//     this.data = data;
+//     console.log(this);
+// }
+//
+// const context = {
+//     a: 1, b: 2
+// }
+//
+// magic.call(context, "ala ma kota");
+// magic.apply(context, ["ala ma kota i ejc"]);
+// const magic2 = magic.bind(context);
+// magic2()
+const h1Ref = document.querySelector('#title');
 
+class Magic {
+    constructor() {
+        this.counter = 0;
+    }
+
+    click() {
+        /// this - object klasy Magic
+
+        ///
+
+        ///this - object klasy Magic
+        // h1Ref.addEventListener('click', (function () {
+        //     this.counter++; // wskazuje na obiekt h1Ref -> dot notation
+        //     console.log(this.counter);
+        // }).bind(this))
+
+        /// this - object klasy Magic
+
+        // janusze programowania
+        // const that = this;
+        //  h1Ref.addEventListener('click', (function () {
+        //     that.counter++; // wskazuje na obiekt h1Ref -> dot notation
+        //     console.log(that.counter);
+        // }))
+
+        h1Ref.addEventListener('click', () => {
+            this.counter++; // wskazuje na obiekt h1Ref -> dot notation
+            console.log(this.counter);
+        })
+    }
+}
+
+const m = new Magic();
+m.click()
