@@ -260,7 +260,7 @@ function calculateAvg(numbers) {
     //     sum += number;
     // }
 
-    for (let i = 0; i < numbers.length; i++){
+    for (let i = 0; i < numbers.length; i++) {
         sum += numbers[i];
     }
 
@@ -268,17 +268,5 @@ function calculateAvg(numbers) {
 }
 
 console.log(calculateAvg([1, 2, 3, 4, 5]));
-
-
-
-
-
-
-
-
-
-
-
-
 
 
